@@ -6,10 +6,10 @@ const TabsCard = ({dragons}) => {
 
 
     return (
-        <Container>
-            <Tab.Container id="left-tabs-example" defaultActiveKey="Dragon 1">
+        <Container fluid="lg">
+            <Tab.Container  id="left-tabs-example" defaultActiveKey="Dragon 1">
                 <Row>
-                    <Col sm={2}>
+                    <Col sm={3}>
                         <Nav variant="pills" className="flex-column">
                             {dragons.map((dragon) =>
                                 <Nav.Item>

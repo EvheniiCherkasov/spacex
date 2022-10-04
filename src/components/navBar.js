@@ -4,6 +4,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import {Button, Modal, Form} from "react-bootstrap";
+
 function NavBar() {
 
     const [show, setShow] = useState(false);
@@ -13,16 +14,13 @@ function NavBar() {
 
     return (
         <>
-            <Navbar className="mb-4" collapseOnSelect expand="lg" bg="secondary" variant="dark">
+            <Navbar className="mb-4" expand="lg" bg="secondary" variant="dark">
                 <Container>
                     <Navbar.Brand style={{fontSize: '30px'}}>Dragons</Navbar.Brand>
-
-
-                        <Nav className="ms-md-auto">
-                            <Button variant="warning" className="me-2 mt-2 mb-2" onClick={handleShow}>Sing In</Button>
-                            <Button variant="warning" className="me-2 mt-2 mb-2" onClick={handleShow}>Sign Out</Button>
-                        </Nav>
-
+                    <Nav className="ms-md-auto">
+                        <Button variant="warning" className="me-2 mt-2 mb-2" onClick={handleShow}>Sing In</Button>
+                        <Button variant="warning" className="me-2 mt-2 mb-2" onClick={handleShow}>Sign Out</Button>
+                    </Nav>
                 </Container>
             </Navbar>
             <Modal show={show} onHide={handelClose}>
