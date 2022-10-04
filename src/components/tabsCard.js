@@ -9,7 +9,7 @@ const TabsCard = ({dragons}) => {
         <Container fluid="lg">
             <Tab.Container className="p-0" id="left-tabs-example" defaultActiveKey="Dragon 1">
                 <Row>
-                    <Col className="p-0" sm={2}>
+                    <Col className="p-md-1" sm={2}>
                         <Nav variant="pills" className="flex-column">
                             {dragons.map((dragon) =>
                                 <Nav.Item>
