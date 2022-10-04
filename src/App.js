@@ -5,6 +5,7 @@ import Footer from "./components/footer";
 import TabsCard from "./components/tabsCard"
 import {useEffect, useState} from "react";
 import DragonService from "./service/dragonService";
+import Spinner from "./components/spinner";
 
 
 function App() {
@@ -18,7 +19,9 @@ function App() {
         })
     }, []);
 
-    if (!dragons.length) return 'loading'
+    if (!dragons.length) return (
+        <Spinner/>
+    )
 
 
     return (
