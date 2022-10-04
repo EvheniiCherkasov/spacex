@@ -15,7 +15,7 @@ function NavBar() {
 
     return (
         <>
-            <Navbar collapseOnSelect expand="lg" bg="secondary" variant="dark">
+            <Navbar className="mb-4" collapseOnSelect expand="lg" bg="secondary" variant="dark">
                 <Container>
                     <Navbar.Brand style={{fontSize: '30px'}}>Dragons</Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
