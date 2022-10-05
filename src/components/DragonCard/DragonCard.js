@@ -1,8 +1,9 @@
 import {Button, Col, Row} from "react-bootstrap";
 import Container from "react-bootstrap/Container";
-import Slider from "./slider";
+import Slider from "../Slider/Slider";
 
-function CardShuttle({dragon}) {
+function DragonCard({dragon}) {
+
     return (
         <Container className="mt-4 mb-4">
             <Row>
@@ -12,7 +13,7 @@ function CardShuttle({dragon}) {
                 <Col md={5}>
                     <h2 className="mt-2">{dragon.name}</h2>
                     <p>{dragon.description}</p>
-                    <ul className="me-0" style={{paddingInlineStart: '3.5%', 'direction': 'ltr'}}>
+                    <ul className="me-0" style={{paddingInlineStart: '3.5%', direction: 'ltr'}}>
                         <li>Height w trunk | metres : {dragon.height}</li>
                         <li>Dry mass | kg: {dragon.mass}</li>
                         <li>First flight : {dragon.years}</li>
@@ -24,4 +25,4 @@ function CardShuttle({dragon}) {
     )
 }
 
-export default CardShuttle;
+export default DragonCard;

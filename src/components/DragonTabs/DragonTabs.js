@@ -1,9 +1,7 @@
 import {Col, Row, Nav, Container, Tab} from 'react-bootstrap';
-import CardShuttle from "./cardShuttle";
+import DragonCard from "../DragonCard/DragonCard";
 
-
-const TabsCard = ({dragons}) => {
-
+const DragonTabs = ({dragons}) => {
 
     return (
         <Container fluid="lg">
@@ -12,8 +10,8 @@ const TabsCard = ({dragons}) => {
                     <Col className="p-md-1" sm={2}>
                         <Nav variant="pills" className="flex-column">
                             {dragons.map((dragon) =>
-                                <Nav.Item>
-                                    <Nav.Link key={dragon.id} eventKey={dragon.name}>{dragon.name}</Nav.Link>
+                                <Nav.Item key={dragon.id}>
+                                    <Nav.Link eventKey={dragon.name}>{dragon.name}</Nav.Link>
                                 </Nav.Item>)}
                         </Nav>
                     </Col>
@@ -21,7 +19,7 @@ const TabsCard = ({dragons}) => {
                         <Tab.Content>
                             {dragons.map((dragon) =>
                                 <Tab.Pane key={dragon.id} eventKey={dragon.name}>
-                                    <CardShuttle dragon={dragon}/>
+                                    <DragonCard dragon={dragon}/>
                                 </Tab.Pane>
                             )}
                         </Tab.Content>
@@ -32,4 +30,4 @@ const TabsCard = ({dragons}) => {
     );
 }
 
-export default TabsCard;
+export default DragonTabs;

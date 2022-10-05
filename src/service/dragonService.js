@@ -1,6 +1,3 @@
-
-
-
 class DragonService {
 
     _apiKey = 'https://api.spacexdata.com/v4/dragons';
@@ -11,6 +8,7 @@ class DragonService {
         if (!res.ok) {
             throw new Error(`Cloud not fetch ${url}, status: ${res.status}`);
         }
+
         return await res.json();
     }
 
@@ -20,6 +18,7 @@ class DragonService {
     }
 
     _transformDragon = (dragon) => {
+
         return {
             id: dragon.id,
             img: dragon.flickr_images,
@@ -31,7 +30,6 @@ class DragonService {
             years: dragon.first_flight,
         }
     }
-
 }
 
 export default DragonService

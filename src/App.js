@@ -1,12 +1,11 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import NavBar from "./components/navBar";
-import Footer from "./components/footer";
-import TabsCard from "./components/tabsCard"
+import NavBar from "./components/NavBar/NavBar";
+import Footer from "./components/Footer/Footer";
+import DragonTabs from "./components/DragonTabs/DragonTabs"
 import {useEffect, useState} from "react";
 import DragonService from "./service/dragonService";
-import Spinner from "./components/spinner";
-
+import Spinner from "./components/Spinner";
 
 function App() {
 
@@ -23,12 +22,11 @@ function App() {
         <Spinner/>
     )
 
-
     return (
         <div className="body">
             <div style={{flex: '1'}}>
                 <NavBar/>
-                <TabsCard dragons={dragons}/>
+                <DragonTabs dragons={dragons}/>
             </div>
             <Footer/>
         </div>
