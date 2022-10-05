@@ -1,19 +1,20 @@
 # SpaseX Dragons
 
-## Installation
-
+## Clone the repository
 
 ### `git clone https://github.com/EvheniiCherkasov/spacex.git`
+## Install dependencies
+### `npm i`
+## Run the project in development mode
 ### `npm start`
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+ ___
+
+## Open the link to see the project
+[https://splendid-yeot-08fdd2.netlify.app/](https://splendid-yeot-08fdd2.netlify.app/)
+
+When committing auto-deploy to Netlify.
 
 
-
-## Deployment
-
-When committing auto-deploy to netlify
-
-Netlify: [https://splendid-yeot-08fdd2.netlify.app/]()
 
 
