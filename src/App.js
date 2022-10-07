@@ -1,35 +1,18 @@
-import './App.css';
+import {Route, Routes} from "react-router-dom";
+import './Pages/HomePage/HomePage.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import NavBar from "./components/NavBar/NavBar";
-import Footer from "./components/Footer/Footer";
-import DragonTabs from "./components/DragonTabs/DragonTabs"
-import {useEffect, useState} from "react";
-import DragonService from "./service/dragonService";
-import Spinner from "./components/Spinner";
+import HomePage from "./Pages/HomePage/HomePage";
+import LoginPage from "./Pages/LoginPage/LoginPage";
+import RegisterPage from "./Pages/RegisterPage/RegisterPage";
 
 function App() {
 
-    const [dragons, setDragons] = useState([]);
-
-    useEffect(() => {
-        const service = new DragonService();
-        service.allDragons().then((item) => {
-            setDragons(item);
-        })
-    }, []);
-
-    if (!dragons.length) return (
-        <Spinner/>
-    )
-
     return (
-        <div className="body">
-            <div style={{flex: '1'}}>
-                <NavBar/>
-                <DragonTabs dragons={dragons}/>
-            </div>
-            <Footer/>
-        </div>
+        <Routes>
+            <Route exact path="/" element={<HomePage/>} />
+            <Route exact path="/login" element={<LoginPage/>} />
+            <Route exact path="/register" element={<RegisterPage/>} />
+        </Routes>
     );
 }
 
