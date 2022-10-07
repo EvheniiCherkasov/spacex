@@ -22,7 +22,7 @@ const SignUp = () => {
                 }));
                 navigate('/');
             })
-            .catch(console.error)
+            .catch(() => alert('Invalid user'))
     }
 
     return (
