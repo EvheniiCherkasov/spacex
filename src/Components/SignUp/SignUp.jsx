@@ -14,7 +14,13 @@ const SignUp = () => {
         console.log(auth);
         createUserWithEmailAndPassword(auth, email, password)
             .then(({user}) => {
+                dispatch(setUser({
+                    email: user.email,
+                    id: user.uid,
+                    token: user.accessToken,
 
+                }));
+                navigate('/');
             })
             .catch(console.error)
     }
