@@ -11,7 +11,6 @@ const SignUp = () => {
 
     const handleRegister = (email, password) => {
         const auth = getAuth();
-        console.log(auth);
         createUserWithEmailAndPassword(auth, email, password)
             .then(({user}) => {
                 dispatch(setUser({
